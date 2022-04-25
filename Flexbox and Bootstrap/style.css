@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+ background: #ccc;
+ padding: 10px;
+ 
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+ height: 500px;
+ align-content: center;
+ flex-wrap: wrap;
+}
+
+.item {
+    background: #f1425d;
+    padding: 30px;
+    margin: 30px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.i4 {
+    order: 3;
+}
+
+.i3 {
+    order: 2;
+    /* height: 200px; */
+}
