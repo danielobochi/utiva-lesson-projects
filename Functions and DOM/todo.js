@@ -1,6 +1,7 @@
 // DOM MANIPULATION
 
 const textInput = document.querySelector("#text-input");
+
 const todoCount = document.querySelector("#todo-count");
 const todoList = document.querySelector("#todo-list");
 const completedCount = document.querySelector("#completed-count");
@@ -12,14 +13,12 @@ let completedCounter = Number(completedCount.textContent);
 
 // 1. Add an event listener to the input field
 textInput.addEventListener("keypress", function (event) {
-  //   console.log(event);
-
-  if (event.key === "Enter") {
+  if (event.code === "Enter") {
+    console.log(event);
     // 2. Get the input value
     const inputValue = event.target.value;
 
     // 3. Append the value to the todo list
-
     todoList.innerHTML += `<li>
                         <label>
                         <input class="complete" type="checkbox" />
