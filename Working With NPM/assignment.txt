@@ -1,0 +1,11 @@
+/*
+
+Assignment Instructions
+
+1. Install axios
+2. Import axios
+3. Using axios, make an AJAX call to this url: https://polar-dusk-46748.herokuapp.com/https://api.fliplet.com/v1/widgets/assets
+4. Log the result to the console
+5. Use these lodash functions to grab any property from the result data: _.get(); 
+
+*/
