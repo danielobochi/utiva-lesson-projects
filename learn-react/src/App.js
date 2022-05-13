@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import MyOwn from "./components/MyOwn";
+import HelloWorld from "./components/HelloWorld";
+// import CardComponent from "./components/CardComponent";
+
+const name = "AJ";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <CardComponent title="1" description="Card 1" />
+      <CardComponent title="2" description="Card 2" />
+      <CardComponent title="3" description="Card 3" /> */}
+      <MyOwn theName={name} />
+      <HelloWorld theName="Owonikoko" />
     </div>
   );
 }

@@ -1,23 +1,22 @@
 import _ from "lodash";
-import axios from "axios";
 
 const url =
   "https://polar-dusk-46748.herokuapp.com/https://api.fliplet.com/v1/widgets/assets";
 
-const handleAssets = async () => {
-  let assets;
+// const handleAssets = async () => {
+//   let assets;
 
-  try {
-    const response = await axios.get(url);
-    assets = response.data;
-  } catch (err) {
-    console.log(err);
-  }
+//   try {
+//     const response = await axios.get(url);
+//     assets = response.data;
+//   } catch (err) {
+//     console.log(err);
+//   }
 
-  console.log(assets);
-};
+//   console.log(assets);
+// };
 
-handleAssets();
+// handleAssets();
 
 /*
 const getFromObj = (obj, target) => {
