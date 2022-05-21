@@ -1,32 +1,40 @@
-import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-
-import Home from "./views/Home";
-import About from "./views/About";
-import Contact from "./views/Contact";
+import { useState } from "react";
 
 import CardComponent from "./components/CardComponent";
+import items from "./database";
 
 function App() {
+  let [cartCount, setCartCount] = useState(0);
+  const [cart, setCart] = useState([]);
+
   return (
     <div>
-      <h1>My App</h1>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <CardComponent title="1" description="Card 1" colour="skyblue" />
-        <CardComponent title="2" description="Card 2" colour="yellow" />
-        <CardComponent title="3" description="Card 3" colour="green" />
+      <h1 className="p-4">My Shop App</h1>
+      <h3 className="p-4">{cartCount} items in cart</h3>
+      <div className="d-flex justify-content-evenly">
+        {items.map((value, index) => {
+          return (
+            <CardComponent
+              key={index}
+              title={value.title}
+              description={value.description}
+              colour={value.colour}
+              addToCart={() => {
+                setCartCount((cartCount += 1));
+                cart.push(value.title);
+              }}
+            />
+          );
+        })}
       </div>
 
-      <nav>
-        <Link to="/">Home</Link> | <Link to="about">About</Link>|{" "}
-        <Link to="contact">Contact</Link>
-      </nav>
+      <h2 className="p-4">Items in cart</h2>
 
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="about" element={<About />}></Route>
-        <Route path="contact" element={<Contact />} />
-      </Routes>
+      <ul>
+        {cart.map((item, index) => {
+          return <li key={index}>{item}</li>;
+        })}
+      </ul>
     </div>
   );
 }
