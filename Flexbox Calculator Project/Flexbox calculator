@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment on flexbox</title>
+        <style>
+        header{
+    display:inline;
+}
+*{
+    box-sizing: border-box;
+}
+main{
+    min-height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    flex: 0 1 60%;
+    min-width:400px;
+}
+
+.buttons,.result{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+}
+.result{
+    height: 100px;
+    border: 1px solid black;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 40px;
+    background: #000;
+    color:#fff;
+    padding:0 10px;
+}
+.button{
+    display:flex;
+    flex: 0 1 25%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid black;
+    border-top:none;
+    border-left:none;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top,#d2d2d2,#ddd);
+    font-size:36px;
+}
+.button:nth-child(4n+1){
+    border-left: 1px solid black;
+}
+.button:nth-child(4n),.button:last-child{
+    background: #f98110;
+    color: #fff;
+}
+.zero-btn{
+    flex-grow: 2;
+}
+.doubleBordered{
+    border: 2px solid black;
+}
+        </style>
+    </head>
+
+    <body>
+        <footer class="info">
+            <h3>Flexbox Calculator project layout by</h3>
+            <h4>DANIEL OBOCHI</h4>
+        </footer>
+
+        <main>
+            <div class="container">
+                <div class="result">0</div>
+                <div class="buttons">
+                    <span class="button resetBtn">AC</span>
+                    <span class="button negative operator">+/-</span>
+                    <span class="button operator percent">%</span>
+                    <span class="button operator">/</span>
+                    <span class="button number">7</span>
+                    <span class="button number">8</span>
+                    <span class="button number">9</span>
+                    <span class="button operator">*</span>
+                    <span class="button number">4</span>
+                    <span class="button number">5</span>
+                    <span class="button number">6</span>
+                    <span class="button operator">-</span>
+                    <span class="button number">1</span>
+                    <span class="button number">2</span>
+                    <span class="button number">3</span>
+                    <span class="button operator">+</span>
+                    <span class="button number zero-btn">0</span>
+                    <span class="button number dot">.</span>
+                    <span class="button  operator">=</span>
+                </div>
+            </div>  
+        </main>
+        
+    </body>
+
+</html>
